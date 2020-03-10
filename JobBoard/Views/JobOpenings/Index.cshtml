@@ -1,0 +1,21 @@
+@using JobOpening.Models;
+
+<h1>Job Openings</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no Job Openings in the list.</p>
+}
+
+<ul>
+  @foreach(JobOpening job in Model)
+  {
+    <li>Title: @job.Title</li>
+    <li>Description: @job.Description</li>
+    <!-- <li>Contact Name: @job.ContactInfo.Name</li>
+    <li>Contact Email: @job.ContactInfo.Email</li>
+    <li>Contact Phone Number: @job.ContactInfo.PhoneNumber</li> -->
+    
+    <p>================================</p>
+  }
+</ul>
