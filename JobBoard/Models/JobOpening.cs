@@ -4,21 +4,16 @@ namespace JobBoard.Models
 {
   public class JobOpening
   {
+    public Contact ContactInfo { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public Contact(string name, string email, string phoneNumber)
-    {
-      Name = name;
-      Email = email;
-      PhoneNumber = phoneNumber;
-    }
     private static List<JobOpening> _newJobOpening = new List<JobOpening>{};
 
-    public JobOpening(string title, string description)
+    public JobOpening(string title, string description, Contact contactinfo)
     {
       Title = title;
       Description = description;
-
+      ContactInfo = contactinfo;
       _newJobOpening.Add(this);
     }
 

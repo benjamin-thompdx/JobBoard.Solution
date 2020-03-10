@@ -22,7 +22,8 @@ namespace JobBoard.Controllers
     [HttpPost("/jobs")]
     public ActionResult Create(string title, string description, string name, string email, string phoneNumber)
     {
-      JobOpening newPosting = new JobOpening(title, description, name, email, phoneNumber);
+      Contact newContact = new Contact(name, email, phoneNumber);
+      JobOpening newPosting = new JobOpening(title, description, newContact);
       return RedirectToAction("Index");
     }
 
