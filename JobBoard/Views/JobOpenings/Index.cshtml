@@ -1,4 +1,4 @@
-@using JobOpening.Models;
+@using JobBoard.Models;
 
 <h1>Job Openings</h1>
 
@@ -12,10 +12,11 @@
   {
     <li>Title: @job.Title</li>
     <li>Description: @job.Description</li>
-    <!-- <li>Contact Name: @job.ContactInfo.Name</li>
-    <li>Contact Email: @job.ContactInfo.Email</li>
-    <li>Contact Phone Number: @job.ContactInfo.PhoneNumber</li> -->
+    <li>Contact Name: @job.Name</li>
+    <li>Contact Email: @job.Email</li>
+    <li>Contact Phone Number: @job.PhoneNumber</li>
     
     <p>================================</p>
   }
 </ul>
+
