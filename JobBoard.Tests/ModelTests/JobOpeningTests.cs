@@ -23,7 +23,7 @@ namespace JobBoard.Tests
     }
 
     [TestMethod]
-    public void Find_ReturnsTheCorrectJobOpening_JobOpening()
+    public void GetId_JobOpeningInstantiateWithAnIdAndGetterReturns_Int()
     {
     //Arrange
     string title = "jr web developer";
