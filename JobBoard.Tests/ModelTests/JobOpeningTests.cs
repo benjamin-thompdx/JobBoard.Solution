@@ -32,8 +32,8 @@ namespace JobBoard.Tests
     JobOpening newPosting = new JobOpening(title, description, newContact);
 
     //Act
-    int result = 0;//Failing Code
-    // int result = newPosting.Id; //Passing Code
+    // int result = 0;//Failing Code
+    int result = newPosting.Id; //Passing Code
 
     //Assert
     Assert.AreEqual(1, result);
