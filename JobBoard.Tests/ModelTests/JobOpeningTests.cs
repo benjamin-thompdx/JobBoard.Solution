@@ -14,14 +14,18 @@ namespace JobBoard.Tests
       JobOpening.ClearAll();
     }
 
-    [TestMethod]
-    public void Find_ReturnsTheCorrectJobOpening_JobOpening()
-    {
-      //Arrange
+    // [TestMethod]
+    // public void Find_ReturnsTheCorrectJobOpening_JobOpening()
+    // {
+    // //Arrange
+    // string description = "Walk the dog.";
+    // JobOpening newItem = new JobOpening(description);
 
-      //Act
+    // //Act
+    // int result = newJobOpening.Id;
 
-      //Assert
-    }
+    // //Assert
+    // Assert.AreEqual(1, result);
+    // }
   }
 }
