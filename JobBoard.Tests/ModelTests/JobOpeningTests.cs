@@ -14,18 +14,29 @@ namespace JobBoard.Tests
       JobOpening.ClearAll();
     }
 
-    // [TestMethod]
-    // public void Find_ReturnsTheCorrectJobOpening_JobOpening()
-    // {
-    // //Arrange
-    // string description = "Walk the dog.";
-    // JobOpening newItem = new JobOpening(description);
+    [TestMethod]
+    public void JobOpeningonstructor_CreatesInstanceOfJobOpening_JobOpening()
+    {
+      Contact newContact = new Contact("name", "email", "phoneNumber");
+      JobOpening newPosting = new JobOpening("title", "description", newContact);
+      Assert.AreEqual(typeof(JobOpening), newPosting.GetType());
+    }
 
-    // //Act
-    // int result = newJobOpening.Id;
+    [TestMethod]
+    public void Find_ReturnsTheCorrectJobOpening_JobOpening()
+    {
+    //Arrange
+    string title = "jr web developer";
+    string description = "fun and exciting junior developer job";
+    Contact newContact = new Contact("name", "email", "phoneNumber");
+    JobOpening newPosting = new JobOpening(title, description, newContact);
 
-    // //Assert
-    // Assert.AreEqual(1, result);
-    // }
+    //Act
+    int result = 0;//Failing Code
+    // int result = newPosting.Id; //Passing Code
+
+    //Assert
+    Assert.AreEqual(1, result);
+    }
   }
 }

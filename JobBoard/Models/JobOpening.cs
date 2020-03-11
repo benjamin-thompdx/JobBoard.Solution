@@ -7,14 +7,16 @@ namespace JobBoard.Models
     public Contact ContactInfo { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    private static List<JobOpening> _newJobOpening = new List<JobOpening>{};
+    public int Id { get; }
+    private static List<JobOpening> _newJobOpening = new List<JobOpening> {};
 
-    public JobOpening(string title, string description, Contact contactinfo)
+    public JobOpening (string title, string description, Contact contactinfo)
     {
       Title = title;
       Description = description;
       ContactInfo = contactinfo;
       _newJobOpening.Add(this);
+      Id = _newJobOpening.Count;
     }
 
      public static List<JobOpening> GetAll()
