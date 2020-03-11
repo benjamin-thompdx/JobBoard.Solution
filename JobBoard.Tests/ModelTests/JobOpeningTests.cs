@@ -38,5 +38,28 @@ namespace JobBoard.Tests
     //Assert
     Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectJobOpening_JobOpening()
+    {
+      //Arrange
+    string title01 = "jr web developer";
+    string description01 = "fun and exciting junior developer job";
+    string title02 = "jr software engineer";
+    string description02 = "fun and exciting software engineer job";
+    Contact newContact01 = new Contact("name1", "email1", "phoneNumber1");
+    Contact newContact02 = new Contact("name2", "email2", "phoneNumber2");
+
+    JobOpening newPosting1 = new JobOpening(title01, description01, newContact01);
+    JobOpening newPosting2 = new JobOpening(title02, description02, newContact02);
+
+      //Act
+      Contact newContact = new Contact("Incorrect test name", "Incorrect test email", "Incorrect test phoneNumber");
+      JobOpening result = new JobOpening("Incorrect test title", "Incorrect test description", newContact02); //Failing code
+      // JobOpening result = JobOpening.Find(2); //Passing code
+
+      //Assert
+      Assert.AreEqual(newPosting2, result);
+    }
   }
 }
