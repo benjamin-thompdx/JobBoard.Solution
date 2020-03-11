@@ -22,5 +22,10 @@ namespace JobBoard.Models
       return _newJobOpening;
     }
 
+        public static void ClearAll()
+    {
+      _newJobOpening.Clear();
+    }
+
   }
 }
