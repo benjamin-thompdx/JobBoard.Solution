@@ -16,7 +16,7 @@ _A job posting board where a user can view and create job openings with details 
 
 | Behavior | Input | Output |
 |---|:---:|:---:|
-|user begins at the home page where the have the options to "Add Job Opening" or view "List of Job Openings"|click on "Add Job Opening"|"/jobs/new" view|
+|user begins at the home page where they have the options to "Add Job Opening" or view "List of Job Openings"|click on "Add Job Opening"|"/jobs/new" view|
 |//|click on "List of Job Openings"|"/jobs" view|
 |user clicks on "Add Job Opening" and enters form inputs for job Title, Description, Contact Name, Contact Email, and Contact Phone Number and clicks submit button|Title: Jr Software Engineer, Description: Entry level software engineer looking to learn and grow with an exciting Portland startup!, Contact Name: Reily O'Reily, Contact Email: OReily@TechPdx.com, Contact Phone Number: (503) 867-5309 - user then clicks submit button|"/job" view: user is shown List of Job Openings, including the details they provided|
 
