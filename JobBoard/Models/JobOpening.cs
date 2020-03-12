@@ -24,9 +24,14 @@ namespace JobBoard.Models
       return _newJobOpening;
     }
 
-        public static void ClearAll()
+      public static void ClearAll()
     {
       _newJobOpening.Clear();
+    }
+
+      public static JobOpening Find(int searchId)
+    {
+      return _newJobOpening[searchId-1];
     }
 
   }

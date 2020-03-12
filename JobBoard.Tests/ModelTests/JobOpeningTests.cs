@@ -54,9 +54,9 @@ namespace JobBoard.Tests
     JobOpening newPosting2 = new JobOpening(title02, description02, newContact02);
 
       //Act
-      Contact newContact = new Contact("Incorrect test name", "Incorrect test email", "Incorrect test phoneNumber");
-      JobOpening result = new JobOpening("Incorrect test title", "Incorrect test description", newContact02); //Failing code
-      // JobOpening result = JobOpening.Find(2); //Passing code
+      // Contact newContact = new Contact("Incorrect test name", "Incorrect test email", "Incorrect test phoneNumber");
+      // JobOpening result = new JobOpening("Incorrect test title", "Incorrect test description", newContact02); //Failing code
+      JobOpening result = JobOpening.Find(2); //Passing code
 
       //Assert
       Assert.AreEqual(newPosting2, result);
